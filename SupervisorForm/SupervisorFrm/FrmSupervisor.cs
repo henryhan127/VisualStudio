@@ -32,7 +32,7 @@ namespace SupervisorForm.SupervisorFrm
                   using(SqlCommand command=new SqlCommand())
                   {
                       command.Connection = conn;
-                      command.CommandText = "select Emp_Id from Employees where Account = @Account";
+                      command.CommandText = "select Emp_Id,LastName,FirstName from Employees where Account = @Account";
                       command.Parameters.Add("@Account", SqlDbType.VarChar, 10).Value = Account;
                       conn.Open();
                       using(SqlDataReader datareader1= command.ExecuteReader())
@@ -40,6 +40,7 @@ namespace SupervisorForm.SupervisorFrm
                           datareader1.Read();
                           string Emp_Id;
                           Emp_Id = datareader1["Emp_Id"].ToString();
+                          this.toolStripLabel2.Text = datareader1["FirstName"].ToString() + datareader1["LastName"].ToString();
                           datareader1.Close();
                           command.CommandText = "select Limits_Id from Employee_Limits where Emp_Id =@Emp_Id";
                           command.Parameters.Add("@Emp_Id", SqlDbType.Int).Value = Emp_Id;
