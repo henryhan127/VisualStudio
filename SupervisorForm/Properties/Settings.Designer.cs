@@ -32,5 +32,15 @@ namespace SupervisorForm.Properties {
                 return ((string)(this["LabDBstring"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.33.105;Initial Catalog=LabDB;Integrated Security=True")]
+        public string LabDBstring_19216833105 {
+            get {
+                return ((string)(this["LabDBstring_19216833105"]));
+            }
+        }
     }
 }
