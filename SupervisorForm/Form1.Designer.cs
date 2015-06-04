@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(98, 71);
+            this.button1.Location = new System.Drawing.Point(110, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -55,6 +55,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+
     }
 }
 
